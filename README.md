@@ -1,3 +1,6 @@
-# CSD-340 Class Repository
+# CSD 340 Web Development with HTML and CSS
 
-This repository contains coursework, assignments, and practice code for my Web Development with HTML class.
+## Contributors
+
+- Instructor: Professor Sue Sampson
+- Tiffany Laurine Davidson
