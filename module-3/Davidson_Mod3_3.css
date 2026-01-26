@@ -1,0 +1,49 @@
+#container {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.left, .right {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+ol, ul {
+  font-weight: 300;
+  padding: 10px;
+  list-style-position: inside;
+}
+
+.left h3, .left ol {
+  border: 1px solid red;
+  border-radius: 15px;
+}
+
+.right h3, .right ul {
+  border: 1px dashed red;
+  border-radius: 15px;
+}
+
+.right ul {
+  list-style-type: upper-roman;
+}
+
+.bottom {
+  width: 100%;
+  margin-top: 60%;
+  float: right;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+a:hover {
+  text-decoration: underline;
+}
