@@ -1,0 +1,58 @@
+#container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: rgba(204, 85, 0, 0.95);
+}
+
+#image-gallery {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid rgba(204, 85, 0, 0.95);
+}
+
+.gallery-item {
+  border-left: 1px solid rgba(204, 85, 0, 0.95);
+  padding: 20px 10px;
+}
+
+.gallery-item:first-child {
+  border-left: none;
+}
+
+h3 {
+  text-align: center;
+  color: rgba(204, 85, 0, 0.85);
+  margin-top: 0;
+}
+
+figure {
+  text-align: center;
+  margin: 0;
+}
+
+img {
+  width: 150px;
+  height: auto;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 0.75em;
+  color: rgba(204, 85, 0, 0.75);
+  margin-top: 8px;
+}
+
+#back-link {
+  margin-top: 60px;
+  text-align: right;
+}
+
+#back-link a {
+  color: rgba(0, 0, 238, 1);
+}
