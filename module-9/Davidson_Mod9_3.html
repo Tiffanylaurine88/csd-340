@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Assignment 9.3 for CSD 340 Web Development with HTML and CSS">
+  <meta name="keywords" content="CSD 340, HTML, CSS, Bellevue University, assignment 9.3">
+  <meta name="author" content="Tiffany Laurine Davidson">
+
+  <title>CSD 340 Web Development with HTML and CSS</title>
+
+  <link rel="stylesheet" href="../module-2/Davidson_Mod2_2.css">
+
+  <script>
+    var wordOne = "Arkansas";
+    var wordTwo = "curious";
+    var wordThree = "family";
+    var wordFour = "progress";
+
+    function revealWordOne() {
+      document.getElementById("span1").textContent = wordOne;
+    }
+
+    function revealWordTwo() {
+      document.getElementById("span2").textContent = wordTwo;
+    }
+
+    function revealWordThree() {
+      document.getElementById("span3").textContent = wordThree;
+    }
+
+    function revealWordFour() {
+      document.getElementById("span4").textContent = wordFour;
+    }
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+    <h2>Simple Story with Click to Reveal Words</h2>
+
+    <p class="intro">
+      I live in <span id="span1">________</span> and I have always liked learning how things work, especially anything technical.
+      I work as a data engineer and a lot of my day is problem solving and figuring out why something is not behaving the way it should.
+      I enjoy learning new tools because it makes me feel more confident when I have to build or fix something fast.
+    </p>
+
+    <p>
+      Outside of work, I spend a lot of time with my <span id="span3">________</span> and I stay busy with projects at home.
+      I like hobbies that let me be creative but also practical, like cooking and baking.
+      If I can learn something new and actually use it, that is always my favorite kind of <span id="span4">________</span>.
+    </p>
+
+    <p>
+      We also have farm goals and I enjoy anything that involves animals and being outdoors.
+      I like the feeling of working toward something long term, even if it is one small step at a time.
+      When life is busy, I try to stay <span id="span2">________</span> and keep a routine that helps me stay focused and not burn out.
+    </p>
+
+    <div>
+      <button type="button" onclick="revealWordOne()">Reveal Word 1</button>
+      <button type="button" onclick="revealWordTwo()">Reveal Word 2</button>
+      <button type="button" onclick="revealWordThree()">Reveal Word 3</button>
+      <button type="button" onclick="revealWordFour()">Reveal Word 4</button>
+    </div>
+
+    <hr>
+
+    <address>
+      <p><a href="https://www.bellevue.edu/" target="_blank" rel="noopener">Bellevue University</a></p>
+      <p>1000 Galvin Road South</p>
+      <p>Bellevue, NE 68005</p>
+    </address>
+  </div>
+</body>
+</html>
