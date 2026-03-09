@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Assignment 10.3 JavaScript Part 2">
+  <meta name="author" content="Tiffany Davidson">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSD 340 Web Development with HTML and CSS</title>
+
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: white;
+      color: black;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    hr {
+      margin-bottom: 30px;
+    }
+
+    .image-block {
+      margin-bottom: 25px;
+    }
+
+    .image-block img {
+      width: 500px;
+      height: auto;
+      display: block;
+    }
+
+    .hover-text {
+      font-size: 18px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <h2>CSD 340 Web Development with HTML and CSS</h2>
+
+    <hr>
+
+    <div class="image-block">
+      <a href="#"
+         onmouseover="document.cave.src='cave_01.jpg';"
+         onmouseout="document.cave.src='cave_02.jpg';">
+        <img src="cave_02.jpg" name="cave" alt="Cave image">
+      </a>
+    </div>
+
+    <div class="hover-text"
+         onmouseover="this.style.color='red';"
+         onmouseout="this.style.color='black';">
+      Run your mouse over the image to change.
+    </div>
+
+    <div class="image-block">
+      <a href="#"
+         onmouseover="document.moon.src='moon_01.jpg';"
+         onmouseout="document.moon.src='moon_02.jpg';">
+        <img src="moon_02.jpg" name="moon" alt="Moon image">
+      </a>
+    </div>
+
+    <div class="hover-text"
+         onmouseover="this.style.color='red';"
+         onmouseout="this.style.color='black';">
+      Run your mouse over the image to change.
+      <br>
+      Right click and select View Source for more details.
+    </div>
+
+  </div>
+</body>
+</html>
