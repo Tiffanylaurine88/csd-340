@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Assignment 11.2 JavaScript Part 3">
+  <meta name="author" content="Tiffany Davidson">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSD 340 Web Development with HTML and CSS</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f2f2f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      width: 80%;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    h1 {
+      color: #1f4e79;
+      margin-top: 0;
+    }
+
+    p.instructions {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      max-width: 500px;
+      padding: 12px;
+      font-size: 18px;
+      margin-bottom: 20px;
+      border: 2px solid #cfcfcf;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .button-row {
+      margin-bottom: 25px;
+    }
+
+    button {
+      padding: 12px 18px;
+      font-size: 18px;
+      margin-right: 12px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .add-btn {
+      background-color: #28a745;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+    }
+
+    .sort-btn {
+      background-color: #007bff;
+    }
+
+    #displayArea {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #f8f9ff;
+      border-radius: 8px;
+      min-height: 60px;
+    }
+
+    #displayArea h3 {
+      margin-top: 0;
+    }
+
+    ol {
+      padding-left: 25px;
+      font-size: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: #1f4e79;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <p class="instructions">
+      Enter a task below and click Add to add it to your to do list.
+      Click Delete Last Entry to remove the last item entered.
+      Click Sort to sort the items in the list.
+    </p>
+
+    <input type="text" id="taskInput" placeholder="Enter a task...">
+
+    <div class="button-row">
+      <button class="add-btn" onclick="addTask()">Add</button>
+      <button class="delete-btn" onclick="deleteLastTask()">Delete Last Entry</button>
+      <button class="sort-btn" onclick="sortTasks()">Sort</button>
+    </div>
+
+    <div id="displayArea">
+      <h3>To Do List:</h3>
+      <p>No tasks added yet.</p>
+    </div>
+
+    <p>
+      <a href="../index.html">Back to Landing Page</a>
+    </p>
+  </div>
+
+  <script>
+    let tasks = [];
+
+    function displayTasks() {
+      let displayArea = document.getElementById("displayArea");
+
+      if (tasks.length === 0) {
+        displayArea.innerHTML = "<h3>To Do List:</h3><p>No tasks added yet.</p>";
+        return;
+      }
+
+      let taskList = "<h3>To Do List:</h3><ol>";
+
+      for (let i = 0; i < tasks.length; i++) {
+        taskList += "<li>" + tasks[i] + "</li>";
+      }
+
+      taskList += "</ol>";
+      displayArea.innerHTML = taskList;
+    }
+
+    function addTask() {
+      let input = document.getElementById("taskInput");
+      let task = input.value.trim();
+
+      if (task === "") {
+        alert("Please enter a task before clicking Add.");
+        return;
+      }
+
+      tasks.push(task);
+      alert("Item: " + task + " Added as item " + tasks.length);
+      input.value = "";
+      displayTasks();
+    }
+
+    function deleteLastTask() {
+      if (tasks.length === 0) {
+        alert("There are no tasks to delete.");
+        return;
+      }
+
+      let deletedTask = tasks.pop();
+      alert("Deleted: " + deletedTask);
+      displayTasks();
+    }
+
+    function sortTasks() {
+      if (tasks.length === 0) {
+        alert("There are no tasks to sort.");
+        return;
+      }
+
+      tasks.sort();
+      alert("The to do list has been sorted.");
+      displayTasks();
+    }
+  </script>
+</body>
+</html>
